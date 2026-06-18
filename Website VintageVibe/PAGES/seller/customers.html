@@ -1,0 +1,81 @@
+const container =
+document.getElementById(
+    "customersContainer"
+);
+
+const customers =
+JSON.parse(
+    localStorage.getItem(
+        "customers"
+    )
+) || [];
+
+if(customers.length === 0){
+
+    container.innerHTML = `
+
+    <div class="activity-card">
+
+        No customers available.
+
+    </div>
+
+    `;
+
+}else{
+
+    let html = `
+
+    <div class="products-table">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Name</th>
+
+                    <th>Email</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+    `;
+
+    customers.forEach(customer => {
+
+        html += `
+
+        <tr>
+
+            <td>
+                ${customer.name}
+            </td>
+
+            <td>
+                ${customer.email}
+            </td>
+
+        </tr>
+
+        `;
+
+    });
+
+    html += `
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    `;
+
+    container.innerHTML = html;
+
+}

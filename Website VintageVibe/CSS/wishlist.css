@@ -1,0 +1,28 @@
+.wishlist-page{
+    padding:60px 0;
+}
+
+.page-title{
+    margin-bottom:30px;
+}
+
+#wishlist-container{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fill,minmax(250px,1fr));
+
+    gap:20px;
+}
+
+.wishlist-card{
+    border:1px solid #eee;
+    border-radius:15px;
+    padding:20px;
+}
+
+.empty-wishlist{
+    text-align:center;
+    border:2px dashed #ddd;
+    border-radius:15px;
+    padding:80px;
+}

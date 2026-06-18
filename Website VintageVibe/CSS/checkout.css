@@ -1,0 +1,63 @@
+.checkout-page{
+    padding:60px 0;
+}
+
+.page-title{
+    margin-bottom:40px;
+}
+
+.checkout-layout{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:30px;
+}
+
+.checkout-form{
+    border:1px solid #eee;
+    padding:25px;
+    border-radius:15px;
+}
+
+.checkout-form input,
+.checkout-form textarea,
+.checkout-form select{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+.checkout-summary{
+    border:1px solid #eee;
+    border-radius:15px;
+    padding:25px;
+    height:fit-content;
+}
+
+.summary-row{
+    display:flex;
+    justify-content:space-between;
+    margin:15px 0;
+}
+
+.total{
+    font-weight:bold;
+}
+
+.checkout-summary button{
+    width:100%;
+    padding:12px;
+    background:#111;
+    color:white;
+    border:none;
+    border-radius:10px;
+}
+
+@media(max-width:768px){
+
+    .checkout-layout{
+        grid-template-columns:1fr;
+    }
+
+}
